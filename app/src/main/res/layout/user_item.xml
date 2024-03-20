@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="user"
+            type="com.edgarhrdevs.edgarhuertariveradocsolutions.domain.UserResponseBody" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+            <TextView
+                android:id="@+id/user_name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre de usuario"
+                app:setText="@{user.userName}"/>
+
+            <TextView
+                android:id="@+id/name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre"
+                app:setText="@{user.name}"/>
+
+            <TextView
+                android:id="@+id/fatherlastname_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Apellido paterno"
+                app:setText="@{user.fatherlastName}"/>
+
+            <TextView
+                android:id="@+id/creation_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Fecha de creación"
+                app:setText="@{user.creationDate}"/>
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                app:setText="@{user.email}"/>
+
+            <TextView
+                android:id="@+id/phonenumber_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Numero de telefono"
+                app:setText="@{user.phoneNumber}"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</layout>
